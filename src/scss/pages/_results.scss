@@ -1,0 +1,17 @@
+.results {
+  background-color: black;
+  display: flex;
+  padding: 20px;
+  min-height: 30vh;
+
+  &__holder {
+    margin: 0 auto;
+    max-width: 400px;
+    color: $white;
+    font-family: $josefinsans-reg;
+}
+  &__list {
+    border: 2px solid $white;
+    padding: 20px;
+  }
+}

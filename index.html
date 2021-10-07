@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/icon-fonts.css">
+    <title>TMDB</title>
+</head>
+<body>
+        <header>
+        <section class="menu">
+            <div class="container">
+                <div class="menu__holder">
+                    <div class="menu__logo"><a href="#" class="menu__logo-link">MOVIE SEARCH</a></div>
+                </div>
+                <div class="menu__watch-later"></div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="hero" style="background-image: url('src/image/felix-mooneeram-.jpg');">
+            <div class="container">
+                <span class="hero__description">Welcome.</span>
+                <h1 class="hero__title">Millions of movies, TV shows and people to discover. Explore now.</h1>
+                <form action="#" class="hero__form">
+                    <input type="text" class="hero__input" id="input-movie" placeholder="Enter a movie">
+                    <button class="hero__btn" id="search-btn">Search<span class="hero__icon icon-search-svg"></span></button>
+                </form>
+            </div>
+        </section> 
+        <section class="results">
+            <div class="container">
+                <div class="results__holder" id="results">
+                    <ul class="results__list" id="list"></ul>
+                </div>
+        </div>
+        </section>
+        <script src="src/js/main.js"></script>
+</body>
+</html>
