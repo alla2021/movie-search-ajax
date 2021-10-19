@@ -28,7 +28,7 @@ document.querySelector('#search-btn').addEventListener('click', function () {
   makeMovieRequest(inputMovie)
 })
 
-//
+//localStorage 
 
 let id = [];
 let favFilmsList = {
@@ -42,6 +42,40 @@ let favFilmsList = {
 };
 favFilmsList.storage = window.localStorage;
 
+///
+let listFilmPlaceholder = document.getElementById("listFilmPlaceholder");
+let pagination_placeholder = document.getElementById("pagination_placeholder");
 
-let button = document.createElement("button");
+//onmouseenter = addToFavourites;
 
+function addToFavourites() {
+let btnAddToFav = document.createElement("button");
+btnAddToFav.style.display = "block";
+btnAddToFav.innerText = "Add to favorite";
+li.appendChild(btnAddToFav);
+li.onmouseleave = () => {
+  btnAddToFav.style.display = "none";
+};
+btnAddToFav.onclick = () => {
+  listFavFilmPlaceholder.innerHTML = "";
+  id.push(`${listFilm[el].ID}`);
+  console.log(id);
+  favFilmsList.setId(id);
+  btnAddToFav.style.display = "none";
+  li.onmouseleave = () => {
+    btnRemFromFav.style.display = "none";
+  };
+  RemoveFromFav();
+};
+}
+
+
+// function RemoveFromFav() {
+//   let btnRemoveFromFav = document.createElement("button");
+//   btnRemoveFromFav.style.display = "block";
+//   btnRemoveFromFav.innerText = "Remove from favorite";
+//   li.appendChild(btnRemoveFromFav);
+//   li.onmouseleave = () => {
+//   btnRemoveFromFav.style.display = "none";
+//   };
+// }
