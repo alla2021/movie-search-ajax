@@ -43,5 +43,5 @@ let favFilmsList = {
 favFilmsList.storage = window.localStorage;
 
 
-
+let button = document.createElement("button");
 
