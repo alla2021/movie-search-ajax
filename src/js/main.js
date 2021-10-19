@@ -27,3 +27,21 @@ document.querySelector('#search-btn').addEventListener('click', function () {
   console.log(inputMovie)
   makeMovieRequest(inputMovie)
 })
+
+//
+
+let id = [];
+let favFilmsList = {
+  storage: null,
+  setId(id) {
+    this.storage.setItem("id", JSON.stringify(id));
+  },
+  getId() {
+    return JSON.parse(this.storage.getItem("id"));
+  }
+};
+favFilmsList.storage = window.localStorage;
+
+
+
+
